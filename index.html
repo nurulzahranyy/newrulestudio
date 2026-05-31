@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>newrulestudio | Portfolio - Nurul Qalbi Zahrani</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Branding Logo -->
+          <div
+            class="flex-shrink-0 font-bold text-2xl tracking-tight text-slate-800"
+          >
+            newrule<span class="text-gradient-color-black-to-blue">s</span
+            ><span class="text-blue-600">tudio</span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-sm font-medium hover:text-blue-600 transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-sm font-medium hover:text-blue-600 transition"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="text-sm font-medium hover:text-blue-600 transition"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="text-sm font-medium hover:text-blue-600 transition"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-sm font-medium hover:text-blue-600 transition"
+              >Skills</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-16"
+    >
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div
+          class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 text-blue-600 font-semibold text-sm border border-blue-100 shadow-sm"
+        >
+          Welcome to NewRules.dev
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+          Halo, saya <span class="text-blue-600">Nurul Qalbi Zahrani</span>
+        </h1>
+        <p
+          class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
+        >
+          Information Systems Developer & UI/UX Enthusiast. Berfokus pada
+          pengembangan perangkat lunak berbasis web dan penciptaan pengalaman
+          pengguna yang intuitif.
+        </p>
+        <div class="flex justify-center gap-4">
+          <a
+            href="#projects"
+            class="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-200"
+            >Lihat Portofolio</a
+          >
+          <a
+            href="#contact"
+            class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium border border-slate-200 hover:bg-slate-50 transition"
+            >Hubungi Saya</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
+          >
+            About Me
+          </h2>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="w-full md:w-1/3 flex justify-center">
+            <div
+              class="w-64 h-64 rounded-2xl bg-slate-200 shadow-inner flex items-center justify-center overflow-hidden"
+            >
+              <span class="text-slate-400"
+                ><i class="fa-solid fa-image text-4xl"></i
+              ></span>
+              <!-- Ganti dengan: <img src="link-fotomu.jpg" class="object-cover w-full h-full" alt="Profile Picture"> -->
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
+            <p class="text-lg text-slate-600 leading-relaxed mb-4">
+              Saya adalah mahasiswi program studi Sistem Informasi di
+              Universitas Mataram yang memiliki ketertarikan mendalam pada
+              <i>Front-End Development</i>, integrasi sistem, dan perancangan
+              UI/UX.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              Saya terbiasa menerjemahkan proses bisnis yang kompleks menjadi
+              antarmuka digital yang ramah pengguna, serta menaruh perhatian
+              besar pada kualitas kode melalui pengujian sistem yang
+              terstruktur, seperti skema <i>System Testing</i> dan UAT.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
+          >
+            Experience & Education
+          </h2>
+        </div>
+
+        <div
+          class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+        >
+          <!-- Timeline Item 1 -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
+            >
+              <i class="fa-solid fa-briefcase text-sm"></i>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-bold text-lg text-slate-800">
+                  Social Media Specialist Internship
+                </h3>
+              </div>
+              <p class="text-sm text-blue-600 font-medium mb-2">
+                Office of International Affairs (OIA), Univ. Mataram
+              </p>
+              <p class="text-sm text-slate-600">
+                Terlibat dalam publikasi digital dan pengembangan sistem
+                manajemen informasi untuk kemitraan internasional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
+            >
+              <i class="fa-solid fa-globe text-sm"></i>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-bold text-lg text-slate-800">
+                  Asian Undergraduate Symposium (AUS)
+                </h3>
+              </div>
+              <p class="text-sm text-blue-600 font-medium mb-2">
+                National University of Singapore (NUS)
+              </p>
+              <p class="text-sm text-slate-600">
+                Berpartisipasi dalam program pertukaran ide lintas budaya dan
+                inovasi pemuda di tingkat Asia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div
+            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+          >
+            <div
+              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
+            >
+              <i class="fa-solid fa-certificate text-sm"></i>
+            </div>
+            <div
+              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-bold text-lg text-slate-800">
+                  Bootcamps & Certifications
+                </h3>
+              </div>
+              <p class="text-sm text-blue-600 font-medium mb-2">
+                Dicoding, RevoU, Digitalent Kominfo
+              </p>
+              <p class="text-sm text-slate-600">
+                Menyelesaikan berbagai pelatihan intensif dalam bidang Front-End
+                Development dan Software Engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
+          >
+            Selected Projects
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="h-48 bg-slate-200 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-slate-400"
+              >
+                Image: KUI System
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                OIA Cooperation Management System
+              </h3>
+              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
+                Membangun sistem berbasis Laravel untuk mendigitalisasi aplikasi
+                kemitraan dan manajemen MoU, mencakup perancangan ERD yang
+                presisi hingga pencatatan jenis peresmian dan implementasi
+                keamanan 2FA.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >PHP</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="h-48 bg-slate-200 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-slate-400"
+              >
+                Image: CAMEAL App
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">CAMEAL Mobile Platform</h3>
+              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
+                Merancang strategi bisnis (Business Model Canvas) dan UI/UX
+                untuk platform katering mahasiswa. Fokus pada estetika Gen-Z
+                dengan desain kemasan produk yang interaktif.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >UI/UX</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >Figma</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="h-48 bg-slate-200 relative">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-slate-400"
+              >
+                Image: Graphic Design
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                Visual & Public Health Design
+              </h3>
+              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
+                Merancang material visual untuk sosialisasi kesehatan
+                masyarakat, seperti panduan penggunaan antibiotik, dengan
+                memanfaatkan Canva dan perangkat desain lainnya untuk edukasi
+                publik.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >Graphic Design</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  >Canva</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
+          >
+            Skills & Tools
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div
+            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
+          >
+            <i class="fa-brands fa-laravel text-4xl text-red-500 mb-3"></i>
+            <h4 class="font-semibold text-slate-700">Laravel</h4>
+          </div>
+          <div
+            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
+          >
+            <i class="fa-brands fa-php text-4xl text-indigo-500 mb-3"></i>
+            <h4 class="font-semibold text-slate-700">PHP</h4>
+          </div>
+          <div
+            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
+          >
+            <i class="fa-brands fa-js text-4xl text-yellow-400 mb-3"></i>
+            <h4 class="font-semibold text-slate-700">JavaScript</h4>
+          </div>
+          <div
+            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
+          >
+            <i class="fa-solid fa-code text-4xl text-blue-400 mb-3"></i>
+            <h4 class="font-semibold text-slate-700">Tailwind CSS</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2 mb-8"
+        >
+          Get In Touch
+        </h2>
+        <p class="text-lg text-slate-600 mb-8">
+          Tertarik untuk berkolaborasi atau ingin berdiskusi lebih lanjut
+          mengenai sistem informasi dan perancangan desain? Jangan ragu untuk
+          menghubungi saya!
+        </p>
+        <div class="flex justify-center gap-6">
+          <a
+            href="#"
+            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+      <p class="text-sm">&copy; 2026 newrulestudio by Nurul Qalbi Zahrani</p>
+    </footer>
+  </body>
+</html>
