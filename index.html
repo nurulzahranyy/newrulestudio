@@ -1,421 +1,824 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>newrulestudio</title>
+    <title>Nurul Qalbi Zahrani - Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+      .text-gradient {
+        background: linear-gradient(to right, #2563eb, #1e3a8a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
   </head>
-  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+  <body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+    <!-- Navigation -->
     <nav
-      class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300"
+      id="navbar"
+      class="fixed w-full transition-all duration-300 z-50 py-4 px-4 md:px-8 "
     >
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div
-            class="flex-shrink-0 font-bold text-2xl tracking-tight text-slate-800"
+      <div
+        class="relative flex justify-between items-center max-w-6xl mx-auto w-full bg-transparant"
+      >
+        <!-- Logo di Kiri -->
+        <a href="#" class="text-xl font-bold text-blue-900 tracking-tight z-20">
+          NQZ.
+        </a>
+
+        <!-- Menu di Tengah persis (Absolute Center) -->
+        <div
+          class="hidden bg-blue-100 rounded-xl md:flex space-x-10 absolute left-1/2 transform -translate-x-1/2 z-10 px-6 py-2 shadow-sm"
+        >
+          <a
+            href="#about"
+            class="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            >About</a
           >
-            newrule<span
-              class="bg-gradient-to-r from-slate-800 to-blue-600 bg-clip-text text-transparent"
-              >s</span
-            ><span class="text-blue-600">tudio</span>
-          </div>
-          <div class="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              class="text-sm font-medium hover:text-blue-600 transition"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="text-sm font-medium hover:text-blue-600 transition"
-              >About</a
-            >
-            <a
-              href="#experience"
-              class="text-sm font-medium hover:text-blue-600 transition"
-              >Experience</a
-            >
-            <a
-              href="#projects"
-              class="text-sm font-medium hover:text-blue-600 transition"
-              >Projects</a
-            >
-            <a
-              href="#skills"
-              class="text-sm font-medium hover:text-blue-600 transition"
-              >Skills</a
-            >
-          </div>
+          <a
+            href="#skills"
+            class="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            >Experience</a
+          >
         </div>
       </div>
     </nav>
 
+    <!-- Hero / About Section -->
     <section
-      id="home"
-      class="min-h-screen flex items-center justify-center pt-16"
+      id="about"
+      class="min-h-screen flex items-center pt-20 pb-20 px-4 max-w-6xl mx-auto"
     >
-      <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="flex flex-col md:flex-row items-center gap-8 w-full">
         <div
-          class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 text-blue-600 font-semibold text-sm border border-blue-100 shadow-sm"
+          class="md:w-1/2 space-y-6"
+          data-aos="fade-right"
+          data-aos-duration="1000"
         >
-          Welcome to newrulestudio
-        </div>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-          Halo, saya <span class="text-blue-600">Nurul Qalbi Zahrani</span>
-        </h1>
-        <p
-          class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
-        >
-          Information Systems Developer & UI/UX Enthusiast. Berfokus pada
-          pengembangan perangkat lunak berbasis web dan penciptaan pengalaman
-          pengguna yang intuitif.
-        </p>
-        <div class="flex justify-center gap-4">
-          <a
-            href="#projects"
-            class="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-200"
-            >Lihat Portofolio</a
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900"
           >
-          <a
-            href="#contact"
-            class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium border border-slate-200 hover:bg-slate-50 transition"
-            >Hubungi Saya</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2
-            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
-          >
-            About Me
-          </h2>
-        </div>
-        <div class="flex flex-col md:flex-row items-center gap-10">
-          <div class="w-full md:w-1/3 flex justify-center">
-            <div
-              class="w-64 h-64 rounded-2xl bg-slate-200 shadow-inner flex items-center justify-center overflow-hidden"
+            Hi! I'm Nurul <br />
+            <span class="text-gradient"
+              >UI/UX Designer & <br />Software Developer</span
             >
-              <span class="text-slate-400"
-                ><i class="fa-solid fa-image text-4xl"></i
-              ></span>
-            </div>
-          </div>
-          <div class="w-full md:w-2/3">
-            <p class="text-lg text-slate-600 leading-relaxed mb-4">
-              Saya adalah mahasiswi program studi Sistem Informasi di
-              Universitas Mataram yang memiliki ketertarikan mendalam pada
-              <i>Front-End Development</i>, integrasi sistem, dan perancangan
-              UI/UX.
-            </p>
-            <p class="text-lg text-slate-600 leading-relaxed">
-              Saya terbiasa menerjemahkan proses bisnis yang kompleks menjadi
-              antarmuka digital yang ramah pengguna, serta menaruh perhatian
-              besar pada kualitas kode melalui pengujian sistem yang
-              terstruktur, seperti skema <i>System Testing</i> dan UAT.
-            </p>
+          </h1>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            I'm a continuous learner who loves turning real-life problems into
+            clean, functional, and aesthetic digital experiences. As an INTJ, I like
+            planning things! I see every project as a new puzzle to solve and
+            optimize.
+          </p>
+          <div class="flex space-x-4 pt-3">
+            <a
+              href="#contact"
+              class="px-8 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 font-semibold"
+              >Let's Talk</a
+            >
+            <a
+              href="#projects"
+              class="px-8 py-3.5 border-2 border-gray-300 text-gray-700 rounded-xl hover:border-blue-600 hover:text-blue-600 hover:-translate-y-1 transition-all duration-300 font-semibold bg-white"
+              >View Work</a
+            >
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="experience" class="py-20 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2
-            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
-          >
-            Experience & Education
-          </h2>
-        </div>
-
         <div
-          class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent"
+          class="md:w-1/2 flex justify-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
         >
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-          >
+          <div class="relative w-72 h-72 md:w-96 md:h-96">
             <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
-            >
-              <i class="fa-solid fa-briefcase text-sm"></i>
-            </div>
+              class="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-50 animate-pulse"
+            ></div>
             <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
+              class="relative aspect-square bg-gray-200 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white hover:scale-105 transition-transform duration-500"
             >
-              <div class="flex items-center justify-between mb-1">
-                <h3 class="font-bold text-lg text-slate-800">
-                  Social Media Specialist Internship
-                </h3>
-              </div>
-              <p class="text-sm text-blue-600 font-medium mb-2">
-                Office of International Affairs (OIA), Univ. Mataram
-              </p>
-              <p class="text-sm text-slate-600">
-                Terlibat dalam publikasi digital dan pengembangan sistem
-                manajemen informasi untuk kemitraan internasional.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-          >
-            <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
-            >
-              <i class="fa-solid fa-globe text-sm"></i>
-            </div>
-            <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
-            >
-              <div class="flex items-center justify-between mb-1">
-                <h3 class="font-bold text-lg text-slate-800">
-                  Asian Undergraduate Symposium (AUS)
-                </h3>
-              </div>
-              <p class="text-sm text-blue-600 font-medium mb-2">
-                National University of Singapore (NUS)
-              </p>
-              <p class="text-sm text-slate-600">
-                Berpartisipasi dalam program pertukaran ide lintas budaya dan
-                inovasi pemuda di tingkat Asia.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-          >
-            <div
-              class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10"
-            >
-              <i class="fa-solid fa-certificate text-sm"></i>
-            </div>
-            <div
-              class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-slate-200 bg-white shadow-sm"
-            >
-              <div class="flex items-center justify-between mb-1">
-                <h3 class="font-bold text-lg text-slate-800">
-                  Bootcamps & Certifications
-                </h3>
-              </div>
-              <p class="text-sm text-blue-600 font-medium mb-2">
-                Dicoding, RevoU, Digitalent Kominfo
-              </p>
-              <p class="text-sm text-slate-600">
-                Menyelesaikan berbagai pelatihan intensif dalam bidang Front-End
-                Development dan Software Engineering.
-              </p>
+              <img
+                src="img/DSC04690.JPG"
+                alt="Nurul Qalbi Zahrani"
+                class="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2
-            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
-          >
-            Selected Projects
-          </h2>
-        </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-white px-4 relative">
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <h2
+          class="text-sm font-bold tracking-widest text-blue-600 uppercase mb-3"
+          data-aos="fade-up"
+        >
+          My Scope
+        </h2>
+        <h3
+          class="text-3xl md:text-4xl font-bold mb-16 text-gray-900"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Tech Stack & Skills
+        </h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Skill Card 1 -->
           <div
-            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+            class="group p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            <div class="h-48 bg-slate-200 relative">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-slate-400"
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl mb-6 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600 group-hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                Image: KUI System
-              </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
             </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">
-                OIA Cooperation Management System
-              </h3>
-              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
-                Membangun sistem berbasis Laravel untuk mendigitalisasi aplikasi
-                kemitraan dan manajemen MoU, mencakup perancangan ERD yang
-                presisi hingga pencatatan jenis peresmian dan implementasi
-                keamanan 2FA.
+            <h4 class="text-xl font-bold text-gray-900 mb-3 text-left">
+              Languages
+            </h4>
+            <p class="text-gray-600 text-left leading-relaxed">
+              PHP, C++, Java, Kotlin
+            </p>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div
+            class="group p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl mb-6 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600 group-hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3 text-left">
+              Web Tech
+            </h4>
+            <p class="text-gray-600 text-left leading-relaxed">
+              HTML, Tailwind CSS, Laravel
+            </p>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div
+            class="group p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl mb-6 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600 group-hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3 text-left">
+              Database & Tools
+            </h4>
+            <p class="text-gray-600 text-left leading-relaxed">
+              MySQL, Git, GitHub, Firebase
+            </p>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div
+            class="group p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-xl mb-6 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300"
+            >
+              <svg
+                class="w-6 h-6 text-blue-600 group-hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3 text-left">
+              Design & Mgmt
+            </h4>
+            <p class="text-gray-600 text-left leading-relaxed">
+              Figma, Canva, Project Management, UI/UX Design
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-sm font-bold tracking-widest text-blue-600 uppercase mb-3"
+            data-aos="fade-up"
+          >
+            Portfolio
+          </h2>
+          <h3
+            class="text-3xl md:text-4xl font-bold text-gray-900"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Projects
+          </h3>
+        </div>
+
+        <div class="space-y-24">
+          <!-- Project 1: OIA -->
+          <div
+            class="group flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg relative"
+            >
+              <div
+                class="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"
+              ></div>
+              <img
+                src="img/unram_submission_partnership.png"
+                alt="OIA Web Portal"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="md:w-1/2 space-y-5">
+              <span
+                class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wider uppercase"
+                >May - June 2026</span
+              >
+              <h4
+                class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+              >
+                International Partnership Submission for OIA University of Mataram
+              </h4>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                A web portal designed to digitize manual processes by enabling users to track submission statuses, synchronize data, and receive automated deadline notifications. Includes Single Sign-On (SSO), real-time tracking, and digital verification features.
+                It can be accessed at <a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank">https://pengajuan.kerjasama.unram.ac.id</a>
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 pt-2">
                 <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Figma</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
                   >Laravel</span
                 >
                 <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
-                  >PHP</span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Tailwind CSS</span
                 >
                 <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
                   >MySQL</span
                 >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >GitHub</span
+                >
+              </div>
+              <div class="pt-4 border-t border-gray-200 mt-6">
+                <p class="font-semibold text-gray-800">
+                  Role:
+                  <span class="text-gray-600 font-normal"
+                    >FullStack Website Developer (Individual Project)</span
+                  >
+                </p>
               </div>
             </div>
           </div>
 
+          <!-- Project 2: CAMEAL -->
           <div
-            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
+            class="group flex flex-col md:flex-row-reverse gap-12 items-center"
+            data-aos="fade-up"
           >
-            <div class="h-48 bg-slate-200 relative">
+            <div
+              class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg relative"
+            >
               <div
-                class="absolute inset-0 flex items-center justify-center text-slate-400"
-              >
-                Image: CAMEAL App
-              </div>
+                class="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"
+              ></div>
+              <img
+                src="img/cameal.png"
+                alt="CAMEAL App"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">CAMEAL Mobile Platform</h3>
-              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
-                Merancang strategi bisnis (Business Model Canvas) dan UI/UX
-                untuk platform katering mahasiswa. Fokus pada estetika Gen-Z
-                dengan desain kemasan produk yang interaktif.
+            <div class="md:w-1/2 space-y-5">
+              <span
+                class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wider uppercase"
+                >September - December 2025</span
+              >
+              <h4
+                class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+              >
+                CAMEAL - Care for Your Meal
+              </h4>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                A B2C Meal Preparation Mobile Application designed to solve the issue of unhealthy instant food consumption among university students by providing flexible meal plans, secure payment gateways, and reliable delivery to connect students with quality catering vendors.
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 pt-2">
                 <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
-                  >UI/UX</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
                   >Figma</span
                 >
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48 bg-slate-200 relative">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-slate-400"
-              >
-                Image: Graphic Design
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">
-                Visual & Public Health Design
-              </h3>
-              <p class="text-sm text-slate-600 mb-4 line-clamp-3">
-                Merancang material visual untuk sosialisasi kesehatan
-                masyarakat, seperti panduan penggunaan antibiotik, dengan
-                memanfaatkan Canva dan perangkat desain lainnya untuk edukasi
-                publik.
-              </p>
-              <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
-                  >Graphic Design</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
                   >Canva</span
                 >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Flutter</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Firebase</span
+                >
+              </div>
+              <div class="pt-4 border-t border-gray-200 mt-6">
+                <p class="font-semibold text-gray-800">
+                  Role:
+                  <span class="text-gray-600 font-normal"
+                    >Hustler - Business Leader (6 members)</span
+                  >
+                </p>
               </div>
             </div>
           </div>
+
+          <!-- Project 3: MyTenses -->
+          <div
+            class="group flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg relative bg-white"
+            >
+              <div
+                class="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-10"
+              ></div>
+              <img
+                src="img/mytenses.png"
+                alt="MyTenses App"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="md:w-1/2 space-y-5">
+              <span
+                class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wider uppercase"
+                >May - June 2025</span
+              >
+              <h4
+                class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+              >
+                MyTenses
+              </h4>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                MyTenses is a mobile application designed to help students independently understand 16 English tenses. Structured with 16 comprehensive tense courses, interactive quizzes with score tracking, and daily study notifications.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Figma</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Kotlin</span
+                >
+              </div>
+              <div class="pt-4 border-t border-gray-200 mt-6">
+                <p class="font-semibold text-gray-800">
+                  Role:
+                  <span class="text-gray-600 font-normal"
+                    >Front End Developer (4 members)</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: IndigeKnows -->
+          <div
+            class="group flex flex-col md:flex-row-reverse gap-12 items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg relative bg-white"
+            >
+              <div
+                class="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-10"
+              ></div>
+              <img
+                src="img/indigeknows.png"
+                alt="IndigeKnows App"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <img
+                src="img/boxcard.png"
+                alt="IndigeKnows Boxcard"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500 mt-4"
+              />
+            </div>
+            <div class="md:w-1/2 space-y-5">
+              <span
+                class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wider uppercase"
+                >12 - 27 July 2025</span
+              >
+              <h4
+                class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+              >
+                IndigeKnows - Every card preserves a story, and every story lives on.
+              </h4>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                IndigeKnows is a community-driven cultural preservation project that
+                translates indigenous oral traditions into immersive learning tools by
+                combining a cultural card game with QR-linked mini-documentaries
+                and low-cost Augmented Reality (AR) features.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Figma</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Canva</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Vuforia</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Blender</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Unity</span
+                >
+              </div>
+              <div class="pt-4 border-t border-gray-200 mt-6">
+                <p class="font-semibold text-gray-800">
+                  Role:
+                  <span class="text-gray-600 font-normal"
+                    >Deputy Lead & AR App Director (7 members)</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Cubeno Education -->
+          <div
+            class="group flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up"
+          >
+            <div
+              class="md:w-1/2 rounded-2xl overflow-hidden shadow-lg relative bg-white"
+            >
+              <div
+                class="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-10"
+              ></div>
+              <img
+                src="img/cubenoeducation.png"
+                alt="Cubeno Education"
+                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="md:w-1/2 space-y-5">
+              <span
+                class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold tracking-wider uppercase"
+                >March 2024 - April 2025</span
+              >
+              <h4
+                class="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors"
+              >
+                Cubeno Education: Robotic Class for Elementary Schooler
+              </h4>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Cubeno Education is a robotics and coding program that introduces STEM to elementary students. To make learning accessible, we designed story-driven learning modules that teach about arduino and how electric works and basic code using Scratch programming through playful, hands-on experiments.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Canva</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Scratch</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Autodesk Fusion</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Arduino IDE</span
+                >
+                <span
+                  class="px-4 py-1.5 bg-white border border-gray-200 shadow-sm text-gray-700 rounded-lg text-sm font-medium"
+                  >Ultimaker Cura</span
+                >
+              </div>
+              <div class="pt-4 border-t border-gray-200 mt-6">
+                <p class="font-semibold text-gray-800">
+                  Role:
+                  <span class="text-gray-600 font-normal"
+                    >Curriculum Developer & Robotics Instructor (4 members)</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <section id="skills" class="py-20 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
+    <!-- Experience Section (Timeline Style) -->
+    <section id="experience" class="py-24 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
           <h2
-            class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2"
+            class="text-sm font-bold tracking-widest text-blue-600 uppercase mb-3"
+            data-aos="fade-up"
           >
-            Skills & Tools
+            Journey
           </h2>
+          <h3
+            class="text-3xl md:text-4xl font-bold text-gray-900"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Work Experience
+          </h3>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div
-            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
-          >
-            <i class="fa-brands fa-laravel text-4xl text-red-500 mb-3"></i>
-            <h4 class="font-semibold text-slate-700">Laravel</h4>
+
+        <div class="space-y-12 border-l-4 border-blue-100 pl-8 ml-4 relative">
+          
+          <!-- Exp 1 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-blue-600 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:scale-125 transition-transform"
+            ></div>
+           
           </div>
-          <div
-            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
-          >
-            <i class="fa-brands fa-php text-4xl text-indigo-500 mb-3"></i>
-            <h4 class="font-semibold text-slate-700">PHP</h4>
+
+          <!-- Exp 2 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-gray-300 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"
+            ></div>
+            <div
+              class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow"
+            >
+              <h4 class="text-xl font-bold text-gray-900">
+                Coding & Programming Tutor
+              </h4>
+              <p class="text-blue-600 font-semibold mb-3">
+                Mandalicode - Mataram
+              </p>
+              <span
+                class="inline-block px-3 py-1 bg-white rounded-md text-gray-500 text-xs font-medium mb-4 border border-gray-200"
+                >Present</span
+              >
+              <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                <li>
+                  Conducting interactive coding and programming classes twice a week.
+                </li>
+                <li>
+                  Delivering structured concepts using Scratch tailored to students' learning paces.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
-          >
-            <i class="fa-brands fa-js text-4xl text-yellow-400 mb-3"></i>
-            <h4 class="font-semibold text-slate-700">JavaScript</h4>
+
+          <!-- Exp 3 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-gray-300 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"
+            ></div>
+            <div
+              class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow"
+            >
+              <h4 class="text-xl font-bold text-gray-900">
+                Fullstack Web Developer Intern
+              </h4>
+              <p class="text-blue-600 font-semibold mb-3">
+                Office of International Affairs - Unram
+              </p>
+              <span
+                class="inline-block px-3 py-1 bg-white rounded-md text-gray-500 text-xs font-medium mb-4 border border-gray-200"
+                >July 2025 - January 2026</span
+              >
+              <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                <li>
+                  Developed and successfully deployed a web-based Partnership Submission System.
+                </li>
+                <li>
+                  Built the end-to-end architecture utilizing PHP Laravel and Tailwind CSS for a responsive interface.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div
-            class="p-6 bg-white rounded-xl shadow-sm border border-slate-100"
-          >
-            <i class="fa-solid fa-code text-4xl text-blue-400 mb-3"></i>
-            <h4 class="font-semibold text-slate-700">Tailwind CSS</h4>
+
+          <!-- Exp 4 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-gray-300 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"
+            ></div>
+            <div
+              class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow"
+            >
+              <h4 class="text-xl font-bold text-gray-900">
+                Assistant Lecturer (OOP Course)
+              </h4>
+              <p class="text-blue-600 font-semibold mb-3">
+                Informatic Engineering - Mataram University
+              </p>
+              <span
+                class="inline-block px-3 py-1 bg-white rounded-md text-gray-500 text-xs font-medium mb-4 border border-gray-200"
+                >Sept 2025 - Dec 2025</span
+              >
+              <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                <li>
+                  Assisted ~40 students in understanding Object-Oriented
+                  Programming concepts.
+                </li>
+                <li>Developed practicum and evaluation materials to assess student understanding.</li>
+              </ul>
+            </div>
           </div>
+
+          <!-- Exp 5 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-gray-300 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"
+            ></div>
+            <div
+              class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow"
+            >
+              <h4 class="text-xl font-bold text-gray-900">
+                Social Media Specialist Intern
+              </h4>
+              <p class="text-blue-600 font-semibold mb-3">
+                Office of International Affairs - Unram
+              </p>
+              <span
+                class="inline-block px-3 py-1 bg-white rounded-md text-gray-500 text-xs font-medium mb-4 border border-gray-200"
+                >Jan 2025 - July 2025</span
+              >
+              <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                <li>
+                  Managed content publishing and website updates via WordPress.
+                </li>
+                <li>
+                  Improved audience engagement through creative Instagram
+                  content designed with Canva and Figma.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Exp 6 -->
+          <div class="relative group" data-aos="fade-up">
+            <div
+              class="absolute w-6 h-6 bg-gray-300 rounded-full -left-[45px] top-1 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"
+            ></div>
+            <div
+              class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow"
+            >
+              <h4 class="text-xl font-bold text-gray-900">
+                Software Tester
+              </h4>
+              <p class="text-blue-600 font-semibold mb-3">
+                POLDA NTB - Mataram University
+              </p>
+              <span
+                class="inline-block px-3 py-1 bg-white rounded-md text-gray-500 text-xs font-medium mb-4 border border-gray-200"
+                >Dec 2024 - Jan 2025</span
+              >
+              <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                <li>
+                  Successfully tested the Akusehat website using User Acceptance Testing (Blackbox Testing) with an 88% pass rate.
+                </li>
+                <li>
+                  Assisted in socializing the website to all employees of Bidokkes Klinik Polda NTB.
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2
-          class="text-3xl font-bold inline-block border-b-4 border-blue-600 pb-2 mb-8"
-        >
-          Get In Touch
-        </h2>
-        <p class="text-lg text-slate-600 mb-8">
-          Tertarik untuk berkolaborasi atau ingin berdiskusi lebih lanjut
-          mengenai sistem informasi dan perancangan desain? Jangan ragu untuk
-          menghubungi saya!
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8" data-aos="zoom-in">
+        <h2 class="text-4xl font-bold">Let's Create Something Great!</h2>
+        <p class="text-gray-400 text-lg">
+          Being original doesn't require being first. It just means being
+          different and better. <p>Feel free to reach out for collaborations!</p>
         </p>
-        <div class="flex justify-center gap-6">
+
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-6 text-lg font-medium pt-4">
           <a
-            href="#"
-            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
-          >
-            <i class="fa-solid fa-envelope"></i>
+            href="mailto:nurulqalbizahrani11@gmail.com"
+            class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+            <iconify-icon icon="mdi:email" class="text-2xl"></iconify-icon>
           </a>
+          <span class="hidden md:block text-gray-600">|</span>
           <a
-            href="#"
-            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
-          >
-            <i class="fa-brands fa-linkedin-in"></i>
+            href="https://linkedin.com/in/nurul-qalbi-zahrani"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+            <iconify-icon icon="mdi:linkedin" class="text-2xl"></iconify-icon>
           </a>
+          <span class="hidden md:block text-gray-600">|</span>
           <a
-            href="#"
-            class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition duration-300 text-xl"
-          >
-            <i class="fa-brands fa-github"></i>
+            href="https://github.com/nurulzahranyy"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+            <iconify-icon icon="mdi:github" class="text-2xl"></iconify-icon>
           </a>
         </div>
-      </div>
-    </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
-      <p class="text-sm">&copy; 2026 newrulestudio by Nurul Qalbi Zahrani</p>
+        <div class="border-t border-gray-800 pt-8 mt-8 text-gray-500 text-sm">
+          &copy; 2026 Nurul Qalbi Zahrani
+        </div>
+      </div>
     </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
