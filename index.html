@@ -5,160 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nurul Qalbi Zahrani - Portfolio</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Animation Library -->
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Custom Glassmorphism Stylesheet -->
+    <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="bg-[#030712] text-slate-100 antialiased overflow-x-hidden selection:bg-blue-500/30 selection:text-white relative">
+  <body class="bg-black text-neutral-100 antialiased overflow-x-hidden selection:bg-white selection:text-black relative">
 
-    <!-- Ambient Mesh Gradient Glow Blobs (Drifting Fluid Abstract) -->
-    <div class="mesh-blob mesh-blob-1"></div>
-    <div class="mesh-blob mesh-blob-2"></div>
-    <div class="mesh-blob mesh-blob-3"></div>
+    <!-- Single Fixed Abstract Background Animation (Hardware Accelerated & Desaturated) -->
+    <div class="abstract-bg-fixed">
+      <video
+        class="abstract-bg-video"
+        src="video/abstract_bg.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        aria-hidden="true"
+      ></video>
+      <div class="abstract-bg-overlay"></div>
+    </div>
 
     <!-- Navigation Bar -->
     <nav
       id="navbar"
-      class="fixed w-full transition-all duration-300 z-50 py-5 px-4 md:px-8 nav-top"
+      class="fixed w-full z-50 py-5 px-4 md:px-8 nav-top"
     >
-      <div class="relative flex justify-between items-center max-w-6xl mx-auto w-full">
-        <!-- Logo -->
-        <a href="#" class="text-xl font-bold tracking-tight z-20 flex items-center gap-2 group">
-          <span class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 group-hover:scale-105 group-hover:border-blue-400 transition-all">
-            N
-          </span>
-          <span class="text-white font-extrabold group-hover:text-blue-400 transition-colors">NQZ.</span>
+      <div class="relative flex justify-between items-center max-w-5xl mx-auto w-full">
+        <!-- Text Logo -->
+        <a href="#" class="text-base font-bold tracking-tight text-white hover:text-neutral-300 transition-colors z-20">
+          NQZ.
         </a>
 
-        <!-- Center Menu Pill (Liquid Glass Style) -->
+        <!-- Center Menu (Clean Monochrome Glass Pill) -->
         <div
-          class="hidden md:flex items-center space-x-1 lg:space-x-2 liquid-glass-strong rounded-full px-5 py-2 absolute left-1/2 transform -translate-x-1/2 z-10"
+          class="hidden md:flex items-center space-x-1 nav-pill px-4 py-1.5 absolute left-1/2 transform -translate-x-1/2 z-10"
         >
           <a
             href="#about"
-            class="px-3.5 py-1 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all"
+            class="px-3 py-1 text-xs font-medium text-neutral-400 hover:text-white rounded-full transition-colors"
             >About</a
           >
           <a
             href="#skills"
-            class="px-3.5 py-1 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all"
+            class="px-3 py-1 text-xs font-medium text-neutral-400 hover:text-white rounded-full transition-colors"
             >Skills</a
           >
           <a
             href="#projects"
-            class="px-3.5 py-1 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all"
+            class="px-3 py-1 text-xs font-medium text-neutral-400 hover:text-white rounded-full transition-colors"
             >Projects</a
           >
           <a
             href="#experience"
-            class="px-3.5 py-1 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all"
+            class="px-3 py-1 text-xs font-medium text-neutral-400 hover:text-white rounded-full transition-colors"
             >Experience</a
           >
           <a
             href="#achievements"
-            class="px-3.5 py-1 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all"
+            class="px-3 py-1 text-xs font-medium text-neutral-400 hover:text-white rounded-full transition-colors"
             >Highlights</a
           >
         </div>
 
-        <!-- Right CTA Button -->
+        <!-- Right Action Button -->
         <div class="z-20">
           <a
             href="#contact"
-            class="btn-primary-glass px-5 py-2 rounded-full text-sm font-semibold text-white inline-flex items-center gap-1.5"
+            class="btn-white text-xs px-4 py-2"
           >
-            <span>Let's Talk</span>
-            <iconify-icon icon="mdi:arrow-top-right" class="text-base"></iconify-icon>
+            Let's Talk
           </a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero / About Section with Abstract Looping Background -->
+    <!-- Hero / About Section -->
     <section
       id="about"
-      class="min-h-screen flex items-center pt-28 pb-20 px-4 max-w-6xl mx-auto relative z-10"
+      class="min-h-screen flex items-center pt-28 pb-20 px-4 max-w-5xl mx-auto relative z-10"
     >
-      <!-- Abstract Animated Background (Prism Template Section 2 Inspired) -->
-      <div class="abstract-bg-wrapper">
-        <video
-          class="abstract-video"
-          src="video/abstract_bg.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          aria-hidden="true"
-        ></video>
-        <!-- Seamless fade gradients -->
-        <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none"></div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-12 w-full relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-12 w-full">
         <!-- Text Column -->
         <div
-          class="md:w-1/2 space-y-6"
+          class="md:w-7/12 space-y-6"
           data-aos="fade-right"
-          data-aos-duration="1000"
         >
-          <!-- Intro Pill Badge -->
-          <div class="liquid-pill-blue inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-            Portfolio & Profile
+          <div class="glass-pill">
+            Portfolio
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight">
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
             Hi! I'm Nurul <br />
-            <span class="text-gradient">UI/UX Designer &amp;<br />Software Developer</span>
+            <span class="text-neutral-400 font-normal">UI/UX Designer &amp; Software Developer</span>
           </h1>
 
-          <p class="text-base md:text-lg text-slate-300 leading-relaxed font-normal">
+          <p class="text-base text-neutral-300 leading-relaxed font-normal max-w-xl">
             I'm a continuous learner who loves turning real-life problems into
             clean, functional, and aesthetic digital experiences. As an INTJ, I like
             planning things! I see every project as a new puzzle to solve and
             optimize.
           </p>
 
-          <div class="flex flex-wrap gap-4 pt-3">
-            <a
-              href="#contact"
-              class="btn-primary-glass px-8 py-3.5 text-white rounded-xl font-semibold flex items-center gap-2"
-            >
-              <span>Let's Talk</span>
-              <iconify-icon icon="mdi:send-outline"></iconify-icon>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#contact" class="btn-white">
+              Let's Talk
             </a>
-            <a
-              href="#projects"
-              class="btn-secondary-glass px-8 py-3.5 rounded-xl font-semibold flex items-center gap-2"
-            >
-              <span>View Work</span>
-              <iconify-icon icon="mdi:arrow-down"></iconify-icon>
+            <a href="#projects" class="btn-glass">
+              View Work
             </a>
           </div>
         </div>
 
-        <!-- Image Column with Glassmorphic Frame -->
+        <!-- Image Column -->
         <div
-          class="md:w-1/2 flex justify-center"
+          class="md:w-5/12 flex justify-center"
           data-aos="fade-left"
-          data-aos-duration="1000"
-          data-aos-delay="200"
         >
-          <div class="relative w-72 h-72 md:w-96 md:h-96">
-            <div
-              class="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl opacity-70 animate-pulse"
-            ></div>
-            <div
-              class="relative aspect-square rounded-[2rem] overflow-hidden p-2 liquid-glass-strong glow-ring hover:scale-[1.02] transition-transform duration-500"
-            >
+          <div class="relative w-64 h-64 md:w-80 md:h-80">
+            <div class="relative w-full h-full rounded-2xl overflow-hidden glass-card p-2 border border-white/10">
               <img
                 src="img/DSC04690.JPG"
                 alt="Nurul Qalbi Zahrani"
-                class="w-full h-full object-cover rounded-[1.5rem]"
+                class="w-full h-full object-cover rounded-xl"
               />
             </div>
           </div>
@@ -167,140 +138,78 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-24 px-4 relative z-10">
-      <div class="max-w-6xl mx-auto text-center">
-        <div class="liquid-pill inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3" data-aos="fade-up">
-          My Scope
-        </div>
-        <h3
-          class="text-3xl md:text-4xl font-bold mb-16 text-white tracking-tight"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Tech Stack &amp; Skills
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Skill Card 1: Languages -->
-          <div
-            class="liquid-glass p-8 rounded-2xl text-left group"
+    <section id="skills" class="py-24 px-4 relative z-10 border-t border-white/[0.06]">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="glass-pill mb-3" data-aos="fade-up">
+            My Scope
+          </div>
+          <h3
+            class="text-3xl md:text-4xl font-bold text-white tracking-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div
-              class="w-12 h-12 rounded-xl mb-6 flex items-center justify-center bg-blue-500/10 border border-blue-500/20 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                ></path>
-              </svg>
-            </div>
-            <h4 class="text-xl font-bold text-white mb-2">
+            Tech Stack &amp; Skills
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Skill 1 -->
+          <div
+            class="glass-card p-6 text-left"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <span class="text-xs font-mono uppercase text-neutral-400 block mb-3">01</span>
+            <h4 class="text-base font-semibold text-white mb-2">
               Languages
             </h4>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-sm text-neutral-400 leading-relaxed">
               PHP, C++, Java, Kotlin
             </p>
           </div>
 
-          <!-- Skill Card 2: Web Tech -->
+          <!-- Skill 2 -->
           <div
-            class="liquid-glass p-8 rounded-2xl text-left group"
+            class="glass-card p-6 text-left"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div
-              class="w-12 h-12 rounded-xl mb-6 flex items-center justify-center bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                ></path>
-              </svg>
-            </div>
-            <h4 class="text-xl font-bold text-white mb-2">
+            <span class="text-xs font-mono uppercase text-neutral-400 block mb-3">02</span>
+            <h4 class="text-base font-semibold text-white mb-2">
               Web Tech
             </h4>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-sm text-neutral-400 leading-relaxed">
               Next.js, Laravel, HTML, Tailwind CSS
             </p>
           </div>
 
-          <!-- Skill Card 3: Database & Tools -->
+          <!-- Skill 3 -->
           <div
-            class="liquid-glass p-8 rounded-2xl text-left group"
+            class="glass-card p-6 text-left"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div
-              class="w-12 h-12 rounded-xl mb-6 flex items-center justify-center bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                ></path>
-              </svg>
-            </div>
-            <h4 class="text-xl font-bold text-white mb-2">
+            <span class="text-xs font-mono uppercase text-neutral-400 block mb-3">03</span>
+            <h4 class="text-base font-semibold text-white mb-2">
               Database &amp; Tools
             </h4>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-sm text-neutral-400 leading-relaxed">
               MySQL, Git, GitHub, Firebase, Google Sheets &amp; Drive APIs
             </p>
           </div>
 
-          <!-- Skill Card 4: Design & Mgmt -->
+          <!-- Skill 4 -->
           <div
-            class="liquid-glass p-8 rounded-2xl text-left group"
+            class="glass-card p-6 text-left"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            <div
-              class="w-12 h-12 rounded-xl mb-6 flex items-center justify-center bg-purple-500/10 border border-purple-500/20 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                ></path>
-              </svg>
-            </div>
-            <h4 class="text-xl font-bold text-white mb-2">
-              Design &amp; Mgmt
+            <span class="text-xs font-mono uppercase text-neutral-400 block mb-3">04</span>
+            <h4 class="text-base font-semibold text-white mb-2">
+              Design &amp; Management
             </h4>
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-sm text-neutral-400 leading-relaxed">
               Figma, Canva, Project Management, UI/UX Design
             </p>
           </div>
@@ -309,385 +218,332 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 px-4 relative z-10">
-      <div class="max-w-6xl mx-auto">
+    <section id="projects" class="py-24 px-4 relative z-10 border-t border-white/[0.06]">
+      <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16">
-          <div class="liquid-pill inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3" data-aos="fade-up">
-            Portfolio &amp; Work
+          <div class="glass-pill mb-3" data-aos="fade-up">
+            Portfolio
           </div>
           <h3
-            class="text-3xl md:text-5xl font-bold text-white tracking-tight"
+            class="text-3xl md:text-4xl font-bold text-white tracking-tight"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Featured Projects
+            Projects
           </h3>
         </div>
 
         <!-- ============================================== -->
-        <!-- SPOTLIGHT: CURRENT PROJECT - SIPROVAL BBPOM -->
-        <!-- With Section 2 Prism-Inspired Abstract Video Bg -->
+        <!-- CURRENT PROJECT: SIPROVAL BBPOM di Mataram -->
         <!-- ============================================== -->
         <div
-          class="spotlight-card p-6 md:p-10 lg:p-12 mb-20 relative overflow-hidden group"
+          class="glass-spotlight p-6 md:p-10 mb-16"
           data-aos="fade-up"
         >
-          <!-- Abstract Looping Video in Background (Prism Template Section 2 Style) -->
-          <div class="abstract-bg-wrapper">
-            <video
-              class="abstract-video opacity-45 mix-blend-screen"
-              src="video/abstract_bg.mp4"
-              autoplay
-              loop
-              muted
-              playsinline
-              aria-hidden="true"
-            ></video>
-            <!-- Gradient overlays to harmonize depth -->
-            <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/80 to-transparent pointer-events-none"></div>
-            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none"></div>
-          </div>
-
-          <div class="relative z-10 flex flex-col lg:flex-row gap-10 items-center">
-            <!-- Left: Project Information -->
-            <div class="lg:w-7/12 space-y-6">
-              <!-- Current Project Pill Badge -->
-              <div class="flex flex-wrap items-center gap-3">
-                <span class="liquid-pill-green inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <!-- Left: Project Info -->
+            <div class="lg:w-7/12 space-y-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="glass-pill glass-pill-active">
                   Current Project • Present
                 </span>
-                <span class="liquid-pill text-xs font-medium text-slate-300 px-3 py-1 rounded-full">
+                <span class="text-xs text-neutral-400">
                   Balai Besar POM di Mataram
                 </span>
               </div>
 
-              <!-- Main Project Title -->
               <div>
-                <h4 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                  SIPROVAL <span class="text-gradient">BBPOM di Mataram</span>
+                <h4 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                  SIPROVAL BBPOM di Mataram
                 </h4>
-                <p class="text-blue-300/90 text-sm md:text-base font-medium mt-2">
+                <p class="text-neutral-400 text-sm mt-1 leading-relaxed">
                   Sistem Informasi Program dan Evaluasi terpadu untuk monitoring, evaluasi, anggaran, dan pelaporan kinerja Balai Besar POM di Mataram.
                 </p>
               </div>
 
-              <!-- Institutional Mandate Highlight Box (From CV) -->
-              <div class="p-4 rounded-xl liquid-glass border border-blue-500/20 space-y-2.5">
-                <div class="flex items-start gap-2.5">
-                  <span class="text-blue-400 text-lg mt-0.5">✦</span>
-                  <p class="text-slate-200 text-sm leading-relaxed">
-                    Successfully fulfilled the intensive <span class="text-white font-semibold">‘One Month, One Application’</span> institutional mandate by designing, developing, and deploying SIPROVAL from scratch until deployed within 30 days using <span class="text-blue-300 font-semibold">Laravel and Next.js</span>.
-                  </p>
+              <!-- CV Achievements Box -->
+              <div class="p-4 rounded-xl glass-card space-y-2 border border-white/10 text-xs md:text-sm text-neutral-300">
+                <div class="leading-relaxed">
+                  — Successfully fulfilled the intensive <span class="text-white font-medium">‘One Month, One Application’</span> institutional mandate by designing, developing, and deploying SIPROVAL from scratch until deployed within 30 days using Laravel and Next.js.
                 </div>
-                <div class="flex items-start gap-2.5">
-                  <span class="text-blue-400 text-lg mt-0.5">✦</span>
-                  <p class="text-slate-200 text-sm leading-relaxed">
-                    Architected a granular <span class="text-white font-semibold">Role-Based Access Control (RBAC)</span> system for 4 organizational tiers (Head of Agency, General Affairs/TU, Team Leads, and PIC).
-                  </p>
+                <div class="leading-relaxed">
+                  — Architected a granular <span class="text-white font-medium">Role-Based Access Control (RBAC)</span> system for 4 organizational tiers (Head of Agency, General Affairs/TU, Team Leads, and PIC).
                 </div>
-                <div class="flex items-start gap-2.5">
-                  <span class="text-blue-400 text-lg mt-0.5">✦</span>
-                  <p class="text-slate-200 text-sm leading-relaxed">
-                    Built an automated data synchronization pipeline via <span class="text-white font-semibold">Google Sheets &amp; Google Drive APIs</span>, eliminating manual spreadsheet reconciliation across divisions seamlessly.
-                  </p>
+                <div class="leading-relaxed">
+                  — Built an automated data synchronization pipeline via <span class="text-white font-medium">Google Sheets &amp; Google Drive APIs</span>, eliminating manual spreadsheet reconciliation across divisions seamlessly.
                 </div>
               </div>
 
-              <!-- CTA Links -->
-              <div class="flex flex-wrap items-center gap-4 pt-2">
+              <!-- Button & URL -->
+              <div class="flex flex-wrap items-center gap-4 pt-1">
                 <a
                   href="https://bbpommataram.id/siproval"
                   target="_blank"
-                  class="btn-primary-glass inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white group/btn"
+                  class="btn-white text-xs px-5 py-2.5"
                 >
-                  <span>Visit Live System</span>
-                  <iconify-icon icon="mdi:arrow-top-right" class="text-lg group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"></iconify-icon>
+                  Visit Live System →
                 </a>
-                <span class="text-xs text-slate-400 font-mono">bbpommataram.id/siproval</span>
+                <span class="text-xs text-neutral-400 font-mono">bbpommataram.id/siproval</span>
               </div>
 
-              <!-- Tech Stack Badges -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">Next.js</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">Laravel</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">PHP</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">Tailwind CSS</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">MySQL</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">Google Sheets API</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">Google Drive API</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-semibold text-blue-300 border-blue-500/20">RBAC Security</span>
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Next.js</span>
+                <span class="glass-tag">Laravel</span>
+                <span class="glass-tag">PHP</span>
+                <span class="glass-tag">Tailwind CSS</span>
+                <span class="glass-tag">MySQL</span>
+                <span class="glass-tag">Google Sheets API</span>
+                <span class="glass-tag">Google Drive API</span>
+                <span class="glass-tag">RBAC</span>
               </div>
 
-              <!-- Role Info -->
-              <div class="pt-4 border-t border-white/10 text-sm">
-                <p class="font-semibold text-slate-200">
-                  Role:
-                  <span class="text-blue-400 font-normal">Full Stack Apps Developer - Internship Maganghub Batch II</span>
-                </p>
+              <!-- Role -->
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Full Stack Apps Developer - Internship Maganghub Batch II</span>
               </div>
             </div>
 
-            <!-- Right: Project Screenshot Preview -->
+            <!-- Right: Screenshot -->
             <div class="lg:w-5/12 w-full">
-              <div class="relative rounded-2xl overflow-hidden liquid-glass border border-white/20 p-2 shadow-2xl group/img">
-                <a href="https://bbpommataram.id/siproval" target="_blank" class="block overflow-hidden rounded-xl">
-                  <img
-                    src="img/siproval.png"
-                    alt="SIPROVAL BBPOM di Mataram"
-                    class="w-full object-cover transform group-hover/img:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </a>
-                <div class="p-3 text-center">
-                  <span class="text-xs text-slate-400 font-medium">Click to open live system • Balai Besar POM di Mataram</span>
-                </div>
-              </div>
+              <a href="https://bbpommataram.id/siproval" target="_blank" class="block rounded-xl overflow-hidden glass-card p-1.5 border border-white/15 hover:border-white/30 transition-all">
+                <img
+                  src="img/siproval.png"
+                  alt="SIPROVAL BBPOM di Mataram"
+                  class="w-full object-cover rounded-lg"
+                />
+              </a>
             </div>
           </div>
         </div>
 
         <!-- ============================================== -->
-        <!-- OTHER PROJECTS (All preserved!) -->
+        <!-- ALL OTHER PROJECTS (Preserved 100%) -->
         <!-- ============================================== -->
-        <div class="space-y-16">
+        <div class="space-y-12">
 
           <!-- Project: IndigeKnows Website -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row-reverse gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg">
-              <a href="https://indigeknows.vercel.app" target="_blank" class="block overflow-hidden">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10">
+              <a href="https://indigeknows.vercel.app" target="_blank" class="block overflow-hidden rounded-lg">
                 <img
                   src="img/image.png"
                   alt="IndigeKnows Website Portal"
-                  class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full object-cover"
                 />
               </a>
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 September 2026
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 IndigeKnows Web Portal: Every Card Preserves a Story
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 A dedicated web portal created as an extension of the broader IndigeKnows cultural preservation project. This platform serves as a digital hub for indigenous oral traditions, featuring a unique <i>personalized postcard</i> generator. It enables users to easily create, customize, and share cultural stories, helping to raise awareness in a modern and interactive way.
               </p>
               
-              <!-- Call to Action Link UI -->
-              <a href="https://indigeknows.vercel.app" target="_blank" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors group/link mt-2">
-                Visit Website
-                <svg class="w-5 h-5 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
+              <a href="https://indigeknows.vercel.app" target="_blank" class="inline-block text-sm text-white underline hover:text-neutral-300 transition-colors">
+                Visit Website →
               </a>
 
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">HTML</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Tailwind CSS</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">GitHub</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">HTML</span>
+                <span class="glass-tag">Tailwind CSS</span>
+                <span class="glass-tag">GitHub</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">Frontend Developer (Individual Project)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Frontend Developer (Individual Project)</span>
               </div>
             </div>
           </div>
 
           <!-- Project 1: OIA Partnership -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg">
-              <a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="block overflow-hidden">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10">
+              <a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="block overflow-hidden rounded-lg">
                 <img
                   src="img/unram_submission_partnership.png"
                   alt="OIA Web Portal"
-                  class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full object-cover"
                 />
               </a>
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 May - June 2026
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 International Partnership Submission for OIA University of Mataram
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 A web portal designed to digitize manual processes by enabling users to track submission statuses, synchronize data, and receive automated deadline notifications. Includes Single Sign-On (SSO), real-time tracking, and digital verification features.
-                It can be accessed at <a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="text-blue-400 underline hover:text-blue-300">https://pengajuan.kerjasama.unram.ac.id</a>
+                Accessible at <a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="text-white underline">pengajuan.kerjasama.unram.ac.id</a>
               </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Figma</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Laravel</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Tailwind CSS</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">MySQL</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">GitHub</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Figma</span>
+                <span class="glass-tag">Laravel</span>
+                <span class="glass-tag">Tailwind CSS</span>
+                <span class="glass-tag">MySQL</span>
+                <span class="glass-tag">GitHub</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">FullStack Website Developer (Individual Project)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">FullStack Website Developer (Individual Project)</span>
               </div>
             </div>
           </div>
 
           <!-- Project 2: CAMEAL -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row-reverse gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10">
               <img
                 src="img/cameal.png"
                 alt="CAMEAL App"
-                class="w-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                class="w-full object-cover rounded-lg"
               />
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 September - December 2025
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 CAMEAL - Care for Your Meal
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 A B2C Meal Preparation Mobile Application designed to solve the issue of unhealthy instant food consumption among university students by providing flexible meal plans, secure payment gateways, and reliable delivery to connect students with quality catering vendors.
               </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Figma</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Canva</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Flutter</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Firebase</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Figma</span>
+                <span class="glass-tag">Canva</span>
+                <span class="glass-tag">Flutter</span>
+                <span class="glass-tag">Firebase</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">Hustler - Business Leader (6 members)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Hustler - Business Leader (6 members)</span>
               </div>
             </div>
           </div>
 
           <!-- Project 3: MyTenses -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg bg-slate-900/60 p-2">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10">
               <img
                 src="img/mytenses.png"
                 alt="MyTenses App"
-                class="w-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                class="w-full object-cover rounded-lg"
               />
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 May - June 2025
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 MyTenses
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 MyTenses is a mobile application designed to help students independently understand 16 English tenses. Structured with 16 comprehensive tense courses, interactive quizzes with score tracking, and daily study notifications.
               </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Figma</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Kotlin</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Figma</span>
+                <span class="glass-tag">Kotlin</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">Front End Developer (4 members)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Front End Developer (4 members)</span>
               </div>
             </div>
           </div>
 
           <!-- Project 4: IndigeKnows AR & Game -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row-reverse gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg bg-slate-900/60 p-2 space-y-3">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10 space-y-2">
               <img
                 src="img/indigeknows.png"
                 alt="IndigeKnows App"
-                class="w-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                class="w-full object-cover rounded-lg"
               />
               <img
                 src="img/boxcard.png"
                 alt="IndigeKnows Boxcard"
-                class="w-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                class="w-full object-cover rounded-lg"
               />
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 12 - 27 July 2025
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 IndigeKnows - Every card preserves a story, and every story lives on.
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 IndigeKnows is a community-driven cultural preservation project that translates indigenous oral traditions into immersive learning tools by combining a cultural card game with QR-linked mini-documentaries and low-cost Augmented Reality (AR) features.
               </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Figma</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Canva</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Vuforia</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Blender</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Unity</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Figma</span>
+                <span class="glass-tag">Canva</span>
+                <span class="glass-tag">Vuforia</span>
+                <span class="glass-tag">Blender</span>
+                <span class="glass-tag">Unity</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">Deputy Lead &amp; AR App Director (7 members)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Deputy Lead &amp; AR App Director (7 members)</span>
               </div>
             </div>
           </div>
 
           <!-- Project 5: Cubeno Education -->
           <div
-            class="liquid-glass p-8 md:p-10 rounded-2xl flex flex-col md:flex-row gap-10 items-center group"
+            class="glass-card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center"
             data-aos="fade-up"
           >
-            <div class="md:w-1/2 rounded-xl overflow-hidden relative border border-white/10 shadow-lg bg-slate-900/60 p-2">
+            <div class="md:w-1/2 rounded-xl overflow-hidden glass-card p-1 border border-white/10">
               <img
                 src="img/cubenoeducation.png"
                 alt="Cubeno Education"
-                class="w-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                class="w-full object-cover rounded-lg"
               />
             </div>
             <div class="md:w-1/2 space-y-4">
-              <span class="liquid-pill-blue inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+              <span class="glass-pill">
                 March 2024 - April 2025
               </span>
-              <h4 class="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h4 class="text-xl md:text-2xl font-bold text-white">
                 Cubeno Education: Robotic Class for Elementary Schooler
               </h4>
-              <p class="text-slate-300 text-base leading-relaxed">
+              <p class="text-neutral-300 text-sm leading-relaxed">
                 Cubeno Education is a robotics and coding program that introduces STEM to elementary students. To make learning accessible, we designed story-driven learning modules that teach about arduino and how electric works and basic code using Scratch programming through playful, hands-on experiments.
               </p>
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Canva</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Scratch</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Autodesk Fusion</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Arduino IDE</span>
-                <span class="glass-tag px-3 py-1 rounded-lg text-xs font-medium">Ultimaker Cura</span>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="glass-tag">Canva</span>
+                <span class="glass-tag">Scratch</span>
+                <span class="glass-tag">Autodesk Fusion</span>
+                <span class="glass-tag">Arduino IDE</span>
+                <span class="glass-tag">Ultimaker Cura</span>
               </div>
-              <div class="pt-4 border-t border-white/10 mt-4">
-                <p class="font-semibold text-slate-200 text-sm">
-                  Role:
-                  <span class="text-slate-400 font-normal">Curriculum Developer &amp; Robotics Instructor (4 members)</span>
-                </p>
+              <div class="pt-3 border-t border-white/[0.08] text-xs">
+                <span class="text-neutral-400">Role:</span>
+                <span class="text-white font-medium ml-1">Curriculum Developer &amp; Robotics Instructor (4 members)</span>
               </div>
             </div>
           </div>
@@ -696,11 +552,11 @@
       </div>
     </section>
 
-    <!-- Experience Section (Timeline Style with Glassmorphic Cards) -->
-    <section id="experience" class="py-24 px-4 relative z-10">
+    <!-- Experience Section (Clean Minimalist Timeline) -->
+    <section id="experience" class="py-24 px-4 relative z-10 border-t border-white/[0.06]">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
-          <div class="liquid-pill inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3" data-aos="fade-up">
+          <div class="glass-pill mb-3" data-aos="fade-up">
             Journey
           </div>
           <h3
@@ -712,35 +568,35 @@
           </h3>
         </div>
 
-        <div class="space-y-10 border-l-2 border-blue-500/30 pl-6 md:pl-8 ml-3 md:ml-4 relative">
+        <div class="space-y-8 border-l border-neutral-800 pl-6 md:pl-8 ml-3 md:ml-4 relative">
           
-          <!-- Exp 0 (NEW FROM CV): BBPOM Mataram / SIPROVAL -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-blue-500 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-[0_0_15px_rgba(59,130,246,0.8)] group-hover:scale-125 transition-transform"></div>
-            <div class="p-6 md:p-8 liquid-glass-strong rounded-2xl border border-blue-500/30 hover:border-blue-400/50 transition-all">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl md:text-2xl font-bold text-white">Full Stack Apps Developer - Internship Maganghub Batch II</h4>
-                <span class="liquid-pill-green px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Present</span>
+          <!-- Exp 0: BBPOM Mataram / SIPROVAL (NEW FROM CV) -->
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-white rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-spotlight">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg md:text-xl font-bold text-white">Full Stack Apps Developer - Internship Maganghub Batch II</h4>
+                <span class="glass-pill glass-pill-active text-xs">Present</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-4 text-base">Balai Besar Pengawas Obat dan Makanan di Mataram</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2.5 text-sm md:text-base leading-relaxed">
-                <li>Successfully fulfilled the intensive <b>‘One Month, One Application’</b> institutional mandate by designing, developing, and deploying <b>SIPROVAL</b> (bbpommataram.id/siproval) from scratch until deployed within 30 days using Laravel and Next.js.</li>
-                <li>Architected a granular <b>Role-Based Access Control (RBAC)</b> system for 4 organizational tiers (Head of Agency, General Affairs/TU, Team Leads, and PIC).</li>
-                <li>Built an automated data synchronization pipeline via <b>Google Sheets &amp; Google Drive APIs</b>, eliminating manual spreadsheet reconciliation across divisions seamlessly.</li>
+              <p class="text-neutral-400 text-sm mb-3">Balai Besar Pengawas Obat dan Makanan di Mataram</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
+                <li>Successfully fulfilled the intensive ‘One Month, One Application’ institutional mandate by designing, developing, and deploying SIPROVAL (bbpommataram.id/siproval) from scratch until deployed within 30 days using Laravel and Next.js.</li>
+                <li>Architected a granular Role-Based Access Control (RBAC) system for 4 organizational tiers (Head of Agency, General Affairs/TU, Team Leads, and PIC).</li>
+                <li>Built an automated data synchronization pipeline via Google Sheets &amp; Google Drive APIs, eliminating manual spreadsheet reconciliation across divisions seamlessly.</li>
               </ul>
             </div>
           </div>
 
           <!-- Exp 1: Coding Tutor -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-blue-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:scale-125 transition-transform"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Coding &amp; Programming Tutor</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">Present</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Coding &amp; Programming Tutor</h4>
+                <span class="glass-pill text-xs">Present</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">Mandalicode - Mataram</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">Mandalicode - Mataram</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Conducting interactive coding and programming classes twice a week to each group containing 5 students.</li>
                 <li>Delivering structured concepts using Scratch tailored to students' learning paces to build foundational tech and problem-solving skills.</li>
               </ul>
@@ -748,31 +604,31 @@
           </div>
 
           <!-- Exp 2: Fullstack Web Developer Intern -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Fullstack Web Developer Intern</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">July 2025 - January 2026</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Fullstack Web Developer Intern</h4>
+                <span class="glass-pill text-xs">July 2025 - January 2026</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">Office of International Affairs - Unram</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
-                <li>Developed and successfully deployed a web-based Partnership Submission System to support the partnership submission process (<a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="text-blue-400 underline">pengajuan.kerjasama.unram.ac.id</a>).</li>
+              <p class="text-neutral-400 text-sm mb-3">Office of International Affairs - Unram</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
+                <li>Developed and successfully deployed a web-based Partnership Submission System to support the partnership submission process (<a href="https://pengajuan.kerjasama.unram.ac.id" target="_blank" class="text-white underline">pengajuan.kerjasama.unram.ac.id</a>).</li>
                 <li>Built the end-to-end architecture utilizing PHP Laravel for robust backend operations and Blade with Tailwind CSS for a responsive, user-friendly frontend interface.</li>
               </ul>
             </div>
           </div>
 
           <!-- Exp 3: Assistant Lecturer -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Assistant Lecturer (OOP Course)</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">Sept 2025 - Dec 2025</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Assistant Lecturer (OOP Course)</h4>
+                <span class="glass-pill text-xs">Sept 2025 - Dec 2025</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">Informatic Engineering - Mataram University</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">Informatic Engineering - Mataram University</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Assisted in Object-Oriented Programming labs by explaining basic OOP concepts and supporting coding practices for around 40 students.</li>
                 <li>Facilitating and assisting students in understanding Object-Oriented Programming (OOP) concepts.</li>
                 <li>Developing practicum and evaluation materials to assess student understanding.</li>
@@ -782,15 +638,15 @@
           </div>
 
           <!-- Exp 4: International Volunteer -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">International Volunteer</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">May 30 - June 6, 2025</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">International Volunteer</h4>
+                <span class="glass-pill text-xs">May 30 - June 6, 2025</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">Universiti Teknologi MARA x University of Mataram (Peduli Anak Foundation)</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">Universiti Teknologi MARA x University of Mataram (Peduli Anak Foundation)</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Collaborated with UiTM Global Volunteer, Malaysia, on cross-cultural community service initiatives.</li>
                 <li>Served as Person in Charge for Indonesia during activities at Yayasan Peduli Anak to prepare event logistics.</li>
                 <li>Designed hygiene awareness posters to support educational outreach and organized activity itineraries.</li>
@@ -799,15 +655,15 @@
           </div>
 
           <!-- Exp 5: Social Media Specialist Intern -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Social Media Specialist Intern</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">Jan 2025 - July 2025</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Social Media Specialist Intern</h4>
+                <span class="glass-pill text-xs">Jan 2025 - July 2025</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">Office of International Affairs - Unram</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">Office of International Affairs - Unram</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Managed content publishing and website updates via WordPress.</li>
                 <li>Improved audience engagement through creative Instagram content designed with Canva and Figma.</li>
               </ul>
@@ -815,15 +671,15 @@
           </div>
 
           <!-- Exp 6: Mentor & Curriculum Developer (Batch 2) -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Mentor &amp; Curriculum Developer (Batch 2)</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">Jan 2025 - April 2025</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Mentor &amp; Curriculum Developer (Batch 2)</h4>
+                <span class="glass-pill text-xs">Jan 2025 - April 2025</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">S-Cube Center (Mataram University) - Cubeno Team</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">S-Cube Center (Mataram University) - Cubeno Team</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Designed structured modules and curriculum tailored for elementary students, including hands-on activities for each lesson.</li>
                 <li>Introduced fundamental concepts of technology, algorithms, and basic programming using Scratch in a fun, interactive way.</li>
                 <li>Mentored and taught 5 students as a private tutor.</li>
@@ -832,15 +688,15 @@
           </div>
 
           <!-- Exp 7: Software Tester -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">Software Tester</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">Dec 2024 - Jan 2025</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">Software Tester</h4>
+                <span class="glass-pill text-xs">Dec 2024 - Jan 2025</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">POLDA NTB - Mataram University</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">POLDA NTB - Mataram University</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Successfully tested the Akusehat website created with User Acceptance Testing (Blackbox Testing) with an 88% pass rate score.</li>
                 <li>Assisted in socializing the website to all employees of Bidokkes Klinik Polda NTB.</li>
               </ul>
@@ -848,15 +704,15 @@
           </div>
 
           <!-- Exp 8: 3D Designer & Mentor (Batch 1) -->
-          <div class="relative group" data-aos="fade-up">
-            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[35px] md:-left-[43px] top-1.5 border-4 border-[#030712] shadow-sm group-hover:bg-blue-500 group-hover:scale-125 transition-all"></div>
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h4 class="text-xl font-bold text-white">3D Designer, Mentor &amp; Curriculum Developer</h4>
-                <span class="liquid-pill px-3 py-1 rounded-md text-slate-300 text-xs font-medium">March 2024 - Aug 2024</span>
+          <div class="relative" data-aos="fade-up">
+            <div class="absolute w-3 h-3 bg-neutral-600 rounded-full -left-[31px] md:-left-[39px] top-2 border-2 border-black"></div>
+            <div class="p-6 glass-card">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h4 class="text-lg font-bold text-white">3D Designer, Mentor &amp; Curriculum Developer</h4>
+                <span class="glass-pill text-xs">March 2024 - Aug 2024</span>
               </div>
-              <p class="text-blue-400 font-semibold mb-3">S-Cube Center (Mataram University) - Cubeno Team</p>
-              <ul class="list-disc ml-5 text-slate-300 space-y-2 text-sm leading-relaxed">
+              <p class="text-neutral-400 text-sm mb-3">S-Cube Center (Mataram University) - Cubeno Team</p>
+              <ul class="list-disc ml-5 text-neutral-300 space-y-1.5 text-sm leading-relaxed">
                 <li>Designed 3D models for robotics tools based on user needs using Autodesk Fusion and produced physical prototypes via 3D printing (Ultimaker Cura).</li>
                 <li>Collaborated with the team to develop functional and educational robotics products.</li>
                 <li>Mentored and taught 25+ students, fostering curiosity, creativity, and problem-solving skills through robotics projects.</li>
@@ -869,10 +725,10 @@
     </section>
 
     <!-- Achievements (Publications & Certifications) -->
-    <section id="achievements" class="py-24 px-4 relative z-10">
-      <div class="max-w-6xl mx-auto">
+    <section id="achievements" class="py-24 px-4 relative z-10 border-t border-white/[0.06]">
+      <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16">
-          <div class="liquid-pill inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3" data-aos="fade-up">
+          <div class="glass-pill mb-3" data-aos="fade-up">
             Highlights
           </div>
           <h3 class="text-3xl md:text-4xl font-bold text-white tracking-tight" data-aos="fade-up" data-aos-delay="100">
@@ -883,60 +739,60 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           <!-- Certifications Column -->
-          <div class="space-y-6" data-aos="fade-right">
-            <h4 class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-              <iconify-icon icon="mdi:certificate" class="text-blue-400"></iconify-icon> Certifications
+          <div class="space-y-4" data-aos="fade-right">
+            <h4 class="text-lg font-bold text-white uppercase tracking-wider text-neutral-400 mb-2">
+              Certifications
             </h4>
             
-            <div class="p-6 liquid-glass rounded-2xl group">
-              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">July 2025</span>
-              <h5 class="text-lg font-bold text-white mt-1 group-hover:text-blue-300 transition-colors">Participant of Asian Undergraduate Symposium 2025</h5>
-              <p class="text-slate-300 text-sm mt-1 font-medium">National University of Singapore</p>
-              <p class="text-slate-400 text-sm mt-2 leading-relaxed">Subjects: Sustainability &amp; Regeneration, Heritage &amp; Culture, Diversity, Equity &amp; Inclusion - Indigeknows Card and Card Design.</p>
-              <a href="https://credentials.nus.edu.sg/90d02300-a028-4ec1-8781-4888f92e1d3a#acc.8G51OHDt" target="_blank" class="text-blue-400 text-sm font-semibold mt-3 inline-flex items-center gap-1 hover:underline">
-                View Credential ➔
+            <div class="p-6 glass-card">
+              <span class="text-xs font-mono text-neutral-400 uppercase">July 2025</span>
+              <h5 class="text-base font-bold text-white mt-1">Participant of Asian Undergraduate Symposium 2025</h5>
+              <p class="text-neutral-400 text-xs mt-1">National University of Singapore</p>
+              <p class="text-neutral-300 text-xs mt-2 leading-relaxed">Subjects: Sustainability &amp; Regeneration, Heritage &amp; Culture, Diversity, Equity &amp; Inclusion - Indigeknows Card and Card Design.</p>
+              <a href="https://credentials.nus.edu.sg/90d02300-a028-4ec1-8781-4888f92e1d3a#acc.8G51OHDt" target="_blank" class="text-white text-xs underline mt-3 inline-block">
+                View Credential →
               </a>
             </div>
 
-            <div class="p-6 liquid-glass rounded-2xl group">
-              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Issued July 2025</span>
-              <h5 class="text-lg font-bold text-white mt-1 group-hover:text-blue-300 transition-colors">Junior Mobile Programmer 2025</h5>
-              <p class="text-slate-300 text-sm mt-1 font-medium">Badan Nasional Sertifikasi Profesi (BNSP)</p>
-              <p class="text-slate-400 text-sm mt-2 leading-relaxed">Subject Covering: Software Development, Mobile Programming.</p>
-              <p class="text-slate-400 text-xs mt-2 font-mono">Credential ID: 14150931</p>
-              <a href="https://github.com/nurulzahranyy/peek-a-bun" target="_blank" class="text-blue-400 text-sm font-semibold mt-2 inline-flex items-center gap-1 hover:underline">
-                View Project ➔
+            <div class="p-6 glass-card">
+              <span class="text-xs font-mono text-neutral-400 uppercase">Issued July 2025</span>
+              <h5 class="text-base font-bold text-white mt-1">Junior Mobile Programmer 2025</h5>
+              <p class="text-neutral-400 text-xs mt-1">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+              <p class="text-neutral-300 text-xs mt-2 leading-relaxed">Subject Covering: Software Development, Mobile Programming.</p>
+              <p class="text-neutral-400 text-xs mt-1 font-mono">Credential ID: 14150931</p>
+              <a href="https://github.com/nurulzahranyy/peek-a-bun" target="_blank" class="text-white text-xs underline mt-2 inline-block">
+                View Project →
               </a>
             </div>
 
-            <div class="p-6 liquid-glass rounded-2xl group">
-              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">15th Feb - 08th Mar 2024</span>
-              <h5 class="text-lg font-bold text-white mt-1 group-hover:text-blue-300 transition-colors">AWS Academy Cloud Foundation &amp; Architecting</h5>
-              <p class="text-slate-300 text-sm mt-1 font-medium">AWS x KOMINFO - Become an AWS Elite Cloud Engineer</p>
-              <p class="text-slate-400 text-sm mt-2 leading-relaxed">1 month of intensive training AWS Academy Cloud Foundation and Architecting, graduated with total scores 89,74. Designed and taught by experts from AWS and Talent Scouting Academy.</p>
-              <a href="https://www.credly.com/badges/92451b2b-b06f-413b-bab3-771d7886940d/print" target="_blank" class="text-blue-400 text-sm font-semibold mt-3 inline-flex items-center gap-1 hover:underline">
-                View Credential ➔
+            <div class="p-6 glass-card">
+              <span class="text-xs font-mono text-neutral-400 uppercase">15th Feb - 08th Mar 2024</span>
+              <h5 class="text-base font-bold text-white mt-1">AWS Academy Cloud Foundation &amp; Architecting</h5>
+              <p class="text-neutral-400 text-xs mt-1">AWS x KOMINFO - Become an AWS Elite Cloud Engineer</p>
+              <p class="text-neutral-300 text-xs mt-2 leading-relaxed">1 month of intensive training AWS Academy Cloud Foundation and Architecting, graduated with total scores 89,74. Designed and taught by experts from AWS and Talent Scouting Academy.</p>
+              <a href="https://www.credly.com/badges/92451b2b-b06f-413b-bab3-771d7886940d/print" target="_blank" class="text-white text-xs underline mt-3 inline-block">
+                View Credential →
               </a>
             </div>
           </div>
 
           <!-- Publications Column -->
-          <div class="space-y-6" data-aos="fade-left">
-            <h4 class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-              <iconify-icon icon="mdi:book-open-page-variant" class="text-blue-400"></iconify-icon> Publications
+          <div class="space-y-4" data-aos="fade-left">
+            <h4 class="text-lg font-bold text-white uppercase tracking-wider text-neutral-400 mb-2">
+              Publications
             </h4>
             
-            <div class="p-6 md:p-8 liquid-glass rounded-2xl group">
-              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Published 2024-09-30</span>
-              <h5 class="text-xl font-bold text-white mt-2 group-hover:text-blue-300 transition-colors leading-snug">
+            <div class="p-6 glass-card">
+              <span class="text-xs font-mono text-neutral-400 uppercase">Published 2024-09-30</span>
+              <h5 class="text-base font-bold text-white mt-2 leading-snug">
                 Robotics and Block Programming Training to Enhance Interest in STEM Learning from an Early Age
               </h5>
-              <p class="text-slate-300 text-sm mt-3 italic leading-relaxed">
-                I Wayan Agus Arimbawa, Heri Wijayanto, Andy Hidayat Jatmika, Raphael Bianco Huwae, Dimas Maulana Rizky, I Nengah Dwi Putra Witarsana, Rizky Insania Ramadhani, <b class="text-white not-italic underline decoration-blue-400">Nurul Qalbi Zahrani</b>
+              <p class="text-neutral-400 text-xs mt-2 italic leading-relaxed">
+                I Wayan Agus Arimbawa, Heri Wijayanto, Andy Hidayat Jatmika, Raphael Bianco Huwae, Dimas Maulana Rizky, I Nengah Dwi Putra Witarsana, Rizky Insania Ramadhani, <b class="text-white not-italic underline">Nurul Qalbi Zahrani</b>
               </p>
-              <div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+              <div class="mt-4 pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs text-neutral-400">
                 <span>Mataram, Indonesia</span>
-                <span class="liquid-pill px-2.5 py-0.5 rounded text-blue-300 font-medium">STEM Research</span>
+                <span>STEM Research</span>
               </div>
             </div>
           </div>
@@ -946,55 +802,49 @@
     </section>
 
     <!-- Footer / Contact -->
-    <footer id="contact" class="py-20 px-4 relative z-10 border-t border-white/10 liquid-glass-strong">
-      <div class="max-w-4xl mx-auto text-center space-y-8" data-aos="zoom-in">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+    <footer id="contact" class="py-20 px-4 relative z-10 border-t border-white/[0.08] bg-black">
+      <div class="max-w-4xl mx-auto text-center space-y-6" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
           Let's Create Something Great!
         </h2>
-        <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p class="text-neutral-400 text-sm max-w-xl mx-auto leading-relaxed">
           Being original doesn't require being first. It just means being different and better. Feel free to reach out for collaborations!
         </p>
 
-        <!-- Social Media / Contact Links -->
-        <div class="flex flex-wrap justify-center items-center gap-4 text-base font-medium pt-2">
+        <!-- Minimalist Text Contact Links -->
+        <div class="flex flex-wrap justify-center items-center gap-4 text-xs md:text-sm font-medium pt-2 text-neutral-300">
           <a
             href="mailto:nurulqalbizahrani11@gmail.com"
-            class="liquid-glass px-5 py-3 rounded-xl flex items-center gap-2 hover:text-blue-400 hover:border-blue-400/40 transition-all text-slate-200"
+            class="glass-card px-4 py-2 hover:text-white transition-colors"
           >
-            <iconify-icon icon="mdi:email" class="text-xl text-blue-400"></iconify-icon>
-            <span>nurulqalbizahrani11@gmail.com</span>
+            nurulqalbizahrani11@gmail.com
           </a>
           
           <a
             href="https://linkedin.com/in/nurul-qalbi-zahrani"
             target="_blank"
-            class="liquid-glass px-5 py-3 rounded-xl flex items-center gap-2 hover:text-blue-400 hover:border-blue-400/40 transition-all text-slate-200"
+            class="glass-card px-4 py-2 hover:text-white transition-colors"
           >
-            <iconify-icon icon="mdi:linkedin" class="text-xl text-blue-400"></iconify-icon>
-            <span>LinkedIn</span>
+            LinkedIn
           </a>
           
           <a
             href="https://github.com/nurulzahranyy"
             target="_blank"
-            class="liquid-glass px-5 py-3 rounded-xl flex items-center gap-2 hover:text-blue-400 hover:border-blue-400/40 transition-all text-slate-200"
+            class="glass-card px-4 py-2 hover:text-white transition-colors"
           >
-            <iconify-icon icon="mdi:github" class="text-xl text-blue-400"></iconify-icon>
-            <span>GitHub</span>
+            GitHub
           </a>
         </div>
 
-        <div class="pt-8 text-slate-400 text-xs md:text-sm">
+        <div class="pt-8 text-neutral-400 text-xs">
           &copy; 2026 Nurul Qalbi Zahrani. All rights reserved.
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
-</html>
-
 </html>
